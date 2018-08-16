@@ -7,18 +7,18 @@ param(
 
 	[ValidateSet("none", "download", "local")]
 	[Parameter(Position = 1)]
-	[string] $DownloadBinary = "download",
+	[string] $DownloadBinary = "local",
 
 	[Parameter(Position = 2)]
 	# absolute or relative path to directory containing cef binaries archives (used if DownloadBinary = local)
-	[string] $CefBinaryDir = "../cefsource/chromium/src/cef/binary_distrib/",
+	[string] $CefBinaryDir = "C:\code3325\chromium_git\chromium\src\cef\binary_distrib\",
 
 	[Parameter(Position = 3)]
-	$CefVersion = "3.3239.1700.g385b2d4",
+	$CefVersion = "3.3325.1758.g9aea513",
 
 	[ValidateSet("tar.bz2","zip","7z")]
 	[Parameter()]
-	[string] $Extension = "tar.bz2",
+	[string] $Extension = "zip",
 	[Switch] $NoDebugBuild
 )
 
@@ -716,7 +716,7 @@ try
 			#VSX v110
 			#VSX v120
 			VSX v141
-			VSX v140
+			#VSX v140
 			Nupkg
 		}
 		"nupkg-only"
